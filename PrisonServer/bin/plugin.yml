@@ -1,0 +1,143 @@
+name: AriaPrison
+main: me.varmetek.prison.Main
+version: 1.0.0
+description: Prison plugin made by Varmetek
+authors: [Varmetek]
+depends: [WorldGuard, WorldEdit, Essentials, PermissionsEx]
+commands:
+  report:
+  stats:
+  sell:
+  worth:
+  rankup:
+  spawn:
+  ignore:
+    permission: ariaprison.commands.ignore 
+  unignore:
+    permission: ariaprison.commands.ignore 
+  autoaction:
+    aliases: [aa]
+  mine:
+    aliases: [minesetting, mineset,mset]
+    permission: ariaprison.commands.mine   
+  autosmelt:
+    permission: ariaprison.commands.autosmelt  
+  autopack:
+    permission: ariaprison.commands.autopack
+  msg:
+    aliases: [tell,whisper,w,message]
+    permission: ariaprison.commands.msg
+  mode:
+    aliases: [m]
+    permission: ariaprison.commands.mode
+  reply:
+    aliases: [r]
+    permission: ariaprison.commands.msg
+  notify:
+    permission: ariaprison.commands.notify
+  mute:
+    permission:  ariaprison.commands.mute
+  motd:
+    permission: ariaprison.commands.motd
+  lookup:
+   permission: ariaprison.commands.lookup
+  chatsettings:
+    aliases: [chats]
+    permission:  ariaprison.commands.chatsettings
+  lockchat:
+    permissions: ariaprison.commands.lockchat
+  clearchat:
+    permission: ariaprison.commands.clearchat
+  loc:
+    permission: ariaprison.commands.loc 
+  prisonsettings:
+    aliases: [prisonset, pset]
+    permission: ariaprison.commands.prisonsettings
+  user:
+  pay:
+permissions:
+  ariaprison.notify.staff:
+    default: op
+  ariaprison.commands.ignore:
+    default: true
+  ariaprison.commands.ignore.immune:
+   default: false
+  ariaprison.chatcolor:
+    default: op
+  ariaprison.commands.worth:
+    default: true
+  ariaprison.commands.worth.set:
+    default: op
+  ariaprison.commands.lookup:
+    default: op
+  ariaprison.command.spawn.admin:
+    default: op
+  ariaprison.commands.loc:
+    default: op
+  ariaprison.commands.clearchat:
+    default: op
+  ariaprison.commands.lockchat: 
+    default: op
+  ariaprison.commands.chatsettings:
+    default: op
+  ariaprison.commands.prisonsettings:
+    default: op
+  ariaprison.commands.motd:
+    default: op
+  ariaprison.commands.mute: 
+    default: op
+  ariaprison.commands.notify:
+    default: op
+  ariaprison.commands.mode.builder:
+    default: op
+  ariaprison.commands.mode.player:
+    default: op
+  ariaprison.commands.mode.staff:
+    default: op
+  ariaprison.commands.mode:
+    default: op
+  ariaprison.commands.mode.*:
+    default: op
+    children:
+      ariaprison.commands.mode.player: true
+      ariaprison.commands.mode.builder: true
+      ariaprison.commands.mode.staff: true
+      ariaprison.commands.mode: true
+  ariaprison.commands.autosmelt:
+    default: false
+  ariaprison.commands.autopack:
+    default: true
+  ariaprison.commands.mine:
+    default: true
+  ariaprison.commands.mine.admin:
+    default: op
+  ariaprison.commands.msg:
+    default: true
+  ariaprison.commands.pay:
+    default: true
+  ariaprison.commands.*:
+    description: Gives access to all admin commands
+    default: false
+    children:
+      ariaprison.commands.mode.*: true
+      ariaprison.commands.notify: true
+      ariaprison.commands.mute: true
+      ariaprison.commands.motd: true
+      ariaprison.commands.prisonsettings: true
+      ariaprison.commands.chatsettings: true
+      ariaprison.commands.lockchat: true
+      ariaprison.commands.clearchat: true
+      ariaprison.commands.loc: true
+      ariaprison.commands.lookup: true
+      ariaprison.commands.msg: true
+      ariaprison.commands.mine: true
+      ariaprison.commands.mine.admin: true
+      ariaprison.commands.autopack: true
+      ariaprison.commands.autosmelt: true
+      ariaprison.commands.spawn.admin: true
+      ariaprison.commands.worth.set: true
+      airaprison.commands.worth: true
+        
+      
+    
+    
